@@ -1,0 +1,159 @@
+/* Dungeon Core Summoner — legal documents
+   Mobile-first: these pages are opened almost entirely from inside the game,
+   on a phone, through the system browser. */
+
+:root {
+  color-scheme: light dark;
+  --bg:      #faf8f2;
+  --panel:   #ffffff;
+  --ink:     #241d0c;
+  --muted:   #6b6250;
+  --rule:    #e2dccb;
+  --accent:  #8a6a12;
+  --accentbg:#f3ecd6;
+  --fill-bg: #ffe9a8;
+  --fill-ink:#5a4300;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:      #16140f;
+    --panel:   #1e1b15;
+    --ink:     #ece5d4;
+    --muted:   #a49b85;
+    --rule:    #35301f;
+    --accent:  #d8b558;
+    --accentbg:#2a2517;
+    --fill-bg: #4a3a08;
+    --fill-ink:#ffe9a8;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", "Noto Sans", "Noto Sans SC", "Noto Sans JP",
+        "Noto Sans KR", sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+header {
+  background: var(--panel);
+  border-bottom: 1px solid var(--rule);
+  padding: 22px 20px 0;
+}
+
+.wrap { max-width: 760px; margin: 0 auto; }
+
+.game {
+  font-size: 13px;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+
+h1 { font-size: 26px; line-height: 1.25; margin: 0 0 16px; }
+
+nav { display: flex; flex-wrap: wrap; gap: 2px; }
+
+nav a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--muted);
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: 9px 9px 0 0;
+  white-space: nowrap;
+}
+
+nav a:hover { color: var(--ink); }
+
+nav a[aria-current="page"] {
+  color: var(--accent);
+  background: var(--accentbg);
+  border-color: var(--rule);
+}
+
+main { max-width: 760px; margin: 0 auto; padding: 26px 20px 70px; }
+
+.effective {
+  font-size: 13px;
+  color: var(--muted);
+  border-left: 3px solid var(--rule);
+  padding: 2px 0 2px 12px;
+  margin: 0 0 30px;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 34px 0 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+}
+
+h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+
+h3 { font-size: 15px; margin: 20px 0 6px; }
+
+p, li { font-size: 15px; }
+
+ul, ol { padding-left: 22px; }
+
+li { margin: 5px 0; }
+
+a { color: var(--accent); }
+
+strong { font-weight: 650; }
+
+.caps {
+  font-size: 13.5px;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+/* Every [BRACKETED] item must be replaced before publishing. See README.md. */
+.fill {
+  background: var(--fill-bg);
+  color: var(--fill-ink);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid var(--rule);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th { background: var(--accentbg); font-size: 13px; }
+
+.scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+footer {
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 13px;
+  padding: 20px;
+}
+
+footer .wrap { display: flex; flex-wrap: wrap; gap: 6px 18px; }
